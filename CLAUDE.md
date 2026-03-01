@@ -20,11 +20,16 @@ hack_the_kra/
 ├── CLAUDE.md
 ├── .env                  # API 키 (git 제외)
 ├── requirements.txt
-├── db/kra.duckdb         # 메인 DB
+├── db/kra.duckdb         # 메인 DB (git 제외)
+├── docs/
+│   ├── KRA_API_목록.md   # Phase별 API 분류 (220개 중 53개)
+│   └── 모델_전략.md      # 3-Stage 아키텍처, 피처 전략
 ├── rules/                # KRA 경마 규칙, 베팅 규칙
 ├── papers/               # 벤터 논문 및 관련 논문 PDF
+├── scripts/
+│   └── check_new_apis.py # API 신규 등록 모니터링 (cron용)
 ├── src/
-│   ├── collect/          # API 수집
+│   ├── collect/          # API 수집 → DuckDB 적재
 │   ├── features/         # 피처 엔지니어링
 │   ├── model/            # Logit → LightGBM, Combined Model
 │   └── betting/          # Kelly Criterion
@@ -35,79 +40,27 @@ hack_the_kra/
 
 ## 데이터 소스
 
-- **1순위**: `AI기반연구용_경주결과상세` API (공공데이터포털, 무료)
-  - 44개 필드: 장구, 기수감량, 순위비고(DQ), 출발지연사유, 복연배당 포함
-  - ⚠️ 역사 데이터 깊이 미확인 → 신청 후 `race_dt=20220101` 테스트 필수
-- **백업**: `AI학습용_경주결과` API (27개 필드)
-- **경주계획**: `AI학습용_경주계획` API
+- **1순위**: `AI기반연구용_경주결과상세` API — 44개 필드 (장구/DQ/복연배당 포함)
+  - ⚠️ 역사 데이터 깊이 미확인 → 승인 후 `race_dt=20220101` 테스트 필수
+- **백업**: `AI학습용_경주결과` API — 27개 필드
+- **API 수집 불가**: 경주 전 배당률 시계열, 부산/제주 당일 체중 → 스크래핑 필요
 
-### 3단계 수집 로드맵
-
-**Phase 1 — 즉시 신청 (역사 데이터)**
-1. AI기반연구용_경주결과상세
-2. AI학습용_경주계획
-3. 확정배당율 통합정보
-4. 경마 매출액 및 확정배당율
-5. 경주마 레이팅 정보
-6. 기수최근1년성적비교
-7. 조교사정보
-
-**Phase 2 — 모델 검증 후 (당일 실시간)**
-8. 서울 출전마 체중
-9. 기수변경 정보 (강력한 시그널)
-10. 제주·부경 기수변경·말취소
-11. 출전표 상세정보
-12. 제재내역
-
-**Phase 3 — 수익성 확인 후 (피처 심화)**
-13. 마필 구간별 경주기록 (페이스)
-14. 조교사일일조교일자
-15. 기수 성적 정보 (6개월 슬라이딩)
-16. 혈통정보기본
-17. 해외경주성적정보
-
-### API로 수집 불가한 데이터
-| 데이터 | 대안 |
-|--------|------|
-| 경주 전 배당률 시계열 (30/10/3분 전) | race.kra.co.kr 스크래핑 |
-| 조교 퀄리티 등급 | 검빛 ₩22,000/월 또는 조교 빈도로 대체 |
-| 부산/제주 당일 체중 | 스크래핑 (서울만 API 존재) |
-| 의료/부상 기록 | 레이팅 변화로 간접 추정 |
+→ Phase별 전체 API 목록: [docs/KRA_API_목록.md](docs/KRA_API_목록.md)
 
 ---
 
 ## 벤터 방법론
-
-→ 논문 원문: [papers/README.md](papers/README.md)
 
 ### 핵심 모델: Combined Multinomial Logit
 ```
 Logit(combined_i) = α × Logit(public_odds_i) + β₁X₁ + β₂X₂ + ... + βₙXₙ
 P(horse i wins) = exp(logit_i) / Σ exp(logit_j)
 ```
-- **공중 배당률을 변수로 통합**하는 것이 핵심 (시장 정보 캡처)
-- 단독 펀더멘털 모델보다 Combined 모델이 압도적으로 우수
-
-### 피처 그룹
-1. **현재 상태**: 최근 성적, 마지막 경주 후 경과일, 조교, 나이
-2. **과거 성적**: 착순, 우승마 대비 격차, 정규화 시간
-3. **조정**: 경쟁 강도, 부담중량, 기수 기여도, 불운 보정, 출발 위치 편향
-4. **현재 경주**: 당일 체중, 기수 능력, 출발 위치
-5. **선호도**: 거리/노면/조건/트랙 선호도
-
-### 핵심 공식
-```python
-# Kelly Criterion
-f_star = (b * p - q) / b
-
-# Harville Formula (KRA 재보정 필요)
-P(A 1st, B 2nd) = P(A 1st) × P(B 2nd | A 제외)
-```
-
-### 성능 지표
-- **Δr²** = r²(combined) - r²(public odds alone) > 0 이면 수익 가능
-- 벤터 논문 달성값: Δr² = 0.0178
+- **공중 배당률을 변수로 통합**하는 것이 핵심 — 단독 펀더멘털 모델보다 압도적으로 우수
+- **Δr²** = r²(combined) - r²(public odds alone) > 0 이면 수익 가능 (벤터 달성값: 0.0178)
 - 모델 훈련 목표: 서울 3년치 3,600+ 경주
+
+→ 3-Stage 아키텍처 및 피처 전략: [docs/모델_전략.md](docs/모델_전략.md)
 
 ---
 
@@ -118,6 +71,7 @@ P(A 1st, B 2nd) = P(A 1st) × P(B 2nd | A 제외)
 | [rules/KRA_경마_기본규칙.md](rules/KRA_경마_기본규칙.md) | 등급 체계, 트랙, 부담중량, 착순 규정 |
 | [rules/KRA_베팅_규칙.md](rules/KRA_베팅_규칙.md) | 승식, 환수율, 세금, 베팅 한도 |
 | [papers/README.md](papers/README.md) | 벤터 논문 및 관련 논문 목록 |
+| [docs/KRA_API_목록.md](docs/KRA_API_목록.md) | Phase 1/2/3 API 분류 및 신청 링크 |
 | [docs/모델_전략.md](docs/모델_전략.md) | 3-Stage 아키텍처, 피처 전략, 개발 로드맵 |
 
 ---
@@ -125,10 +79,7 @@ P(A 1st, B 2nd) = P(A 1st) × P(B 2nd | A 제외)
 ## TODO
 
 ### 즉시
-- [ ] `AI기반연구용_경주결과상세` API 신청
-- [ ] `AI학습용_경주결과` API 신청 (백업)
-- [ ] `AI학습용_경주계획` API 신청
-- [ ] Phase 1 나머지 4개 API 신청
+- [ ] data.go.kr Phase 1~3 API 전체 신청 → [docs/KRA_API_목록.md](docs/KRA_API_목록.md) 참조
 - [ ] 역사 데이터 깊이 테스트: `race_dt=20220101`
 
 ### 데이터 수집
@@ -137,8 +88,8 @@ P(A 1st, B 2nd) = P(A 1st) × P(B 2nd | A 제외)
 
 ### 모델 개발
 - [ ] 기초 피처 엔지니어링
-- [ ] Multinomial Logit 베이스라인
-- [ ] 공중 배당률 통합 (Combined Model)
+- [ ] Multinomial Logit 베이스라인 (v1 — 벤터 재현)
+- [ ] LightGBM + 공중 배당률 통합 (v2)
 - [ ] KRA용 Harville 파라미터 재추정
 - [ ] Holdout 검증 + Δr² 측정
 - [ ] Optuna 하이퍼파라미터 튜닝

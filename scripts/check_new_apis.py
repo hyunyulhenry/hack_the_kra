@@ -10,13 +10,15 @@ cron 예시 (매월 1일 오전 9시):
 
 import re
 import sys
+import io
 import json
 import requests
 from pathlib import Path
 from datetime import datetime
 
-# Windows cp949 인코딩 문제 방지
-sys.stdout.reconfigure(encoding="utf-8")
+# Windows cp949 인코딩 문제 방지 (cron 환경 포함)
+if hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 SEARCH_URL = "https://www.data.go.kr/tcs/dss/selectDataSetList.do"
 BASE_PARAMS = {
