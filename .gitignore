@@ -1,0 +1,22 @@
+# 환경
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 데이터 (용량 큼, git 제외)
+data/raw/
+db/
+
+# 노트북 체크포인트
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,19 @@
+# 데이터 수집
+requests==2.32.3
+python-dotenv==1.0.1
+
+# DB
+duckdb==1.2.0
+
+# 데이터 처리
+pandas==2.2.3
+numpy==2.2.3
+
+# 모델
+scikit-learn==1.6.1
+statsmodels==0.14.4
+lightgbm==4.5.0
+optuna==4.2.1
+
+# 노트북
+jupyter==1.1.1
