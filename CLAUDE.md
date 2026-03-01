@@ -20,7 +20,6 @@ hack_the_kra/
 ├── CLAUDE.md
 ├── .env                  # API 키 (git 제외)
 ├── requirements.txt
-├── data/raw/             # API 원본 JSON
 ├── db/kra.duckdb         # 메인 DB
 ├── rules/                # KRA 경마 규칙, 베팅 규칙
 ├── papers/               # 벤터 논문 및 관련 논문 PDF
@@ -148,3 +147,7 @@ P(A 1st, B 2nd) = P(A 1st) × P(B 2nd | A 제외)
 - [ ] Kelly Criterion 베팅 사이즈 계산기
 - [ ] 실시간 배당률 스크래퍼 (race.kra.co.kr)
 - [ ] 더비온 앱 연동 검토
+
+### 정기 점검 (3개월마다)
+- [ ] data.go.kr 한국마사회 API 신규 등록 확인 (현재 220개, 2026-03-01 기준)
+- [ ] 기존 API 변경/폐지 여부 확인
