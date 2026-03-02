@@ -72,6 +72,7 @@ P(horse i wins) = exp(logit_i) / Σ exp(logit_j)
 | [rules/KRA_베팅_규칙.md](rules/KRA_베팅_규칙.md) | 승식, 환수율, 세금, 베팅 한도 |
 | [papers/README.md](papers/README.md) | 벤터 논문 및 관련 논문 목록 |
 | [docs/KRA_API_목록.md](docs/KRA_API_목록.md) | Phase 1/2/3 API 분류 및 신청 링크 |
+| [docs/KRA_사이트_스크래핑_목록.md](docs/KRA_사이트_스크래핑_목록.md) | race.kra.co.kr 스크래핑 대상 (API 미제공 데이터) |
 | [docs/모델_전략.md](docs/모델_전략.md) | 3-Stage 아키텍처, 피처 전략, 개발 로드맵 |
 
 ---
@@ -100,5 +101,5 @@ P(horse i wins) = exp(logit_i) / Σ exp(logit_j)
 - [ ] 더비온 앱 연동 검토
 
 ### 정기 점검 (3개월마다)
-- [ ] data.go.kr 한국마사회 API 신규 등록 확인 (현재 220개, 2026-03-01 기준)
-- [ ] 기존 API 변경/폐지 여부 확인
+- [ ] data.go.kr 한국마사회 API 신규 등록 확인 (현재 220개, 2026-03-01 기준) → `scripts/check_new_apis.py`
+- [ ] race.kra.co.kr 신규 페이지 확인 (현재 116개 경로, 2026-03-02 기준) → `scripts/check_new_pages.py`

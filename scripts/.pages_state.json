@@ -1,0 +1,469 @@
+{
+  "pages": [
+    {
+      "path": "/KHC/KHCView.do",
+      "url": "https://race.kra.co.kr/KHC/KHCView.do"
+    },
+    {
+      "path": "/cancelTicket/CancelTicketList.do",
+      "url": "https://race.kra.co.kr/cancelTicket/CancelTicketList.do"
+    },
+    {
+      "path": "/cancelTicket/notice.do",
+      "url": "https://race.kra.co.kr/cancelTicket/notice.do"
+    },
+    {
+      "path": "/chulmainfo/ChulmaDetailInfoList.do",
+      "url": "https://race.kra.co.kr/chulmainfo/ChulmaDetailInfoList.do"
+    },
+    {
+      "path": "/chulmainfo/ChulmainfoBoard.do",
+      "url": "https://race.kra.co.kr/chulmainfo/ChulmainfoBoard.do"
+    },
+    {
+      "path": "/chulmainfo/ContinueHorses.do",
+      "url": "https://race.kra.co.kr/chulmainfo/ContinueHorses.do"
+    },
+    {
+      "path": "/chulmainfo/EventRaceHrPoint.do",
+      "url": "https://race.kra.co.kr/chulmainfo/EventRaceHrPoint.do"
+    },
+    {
+      "path": "/chulmainfo/ObjRaceList.do",
+      "url": "https://race.kra.co.kr/chulmainfo/ObjRaceList.do"
+    },
+    {
+      "path": "/chulmainfo/RaceTitle.do",
+      "url": "https://race.kra.co.kr/chulmainfo/RaceTitle.do"
+    },
+    {
+      "path": "/chulmainfo/RacingcourseStructure.do",
+      "url": "https://race.kra.co.kr/chulmainfo/RacingcourseStructure.do"
+    },
+    {
+      "path": "/chulmainfo/RegistStateList.do",
+      "url": "https://race.kra.co.kr/chulmainfo/RegistStateList.do"
+    },
+    {
+      "path": "/chulmainfo/Riding.do",
+      "url": "https://race.kra.co.kr/chulmainfo/Riding.do"
+    },
+    {
+      "path": "/chulmainfo/RidingBadJockey.do",
+      "url": "https://race.kra.co.kr/chulmainfo/RidingBadJockey.do"
+    },
+    {
+      "path": "/chulmainfo/trackView.do",
+      "url": "https://race.kra.co.kr/chulmainfo/trackView.do"
+    },
+    {
+      "path": "/css/common.css",
+      "url": "https://race.kra.co.kr/css/common.css"
+    },
+    {
+      "path": "/css/sub.css",
+      "url": "https://race.kra.co.kr/css/sub.css"
+    },
+    {
+      "path": "/dbdata/renewDBDate.do",
+      "url": "https://race.kra.co.kr/dbdata/renewDBDate.do"
+    },
+    {
+      "path": "/dbdata/textData.do",
+      "url": "https://race.kra.co.kr/dbdata/textData.do"
+    },
+    {
+      "path": "/dbdata/viewBoard.do",
+      "url": "https://race.kra.co.kr/dbdata/viewBoard.do"
+    },
+    {
+      "path": "/jockey/DailyJockeyTrainList.do",
+      "url": "https://race.kra.co.kr/jockey/DailyJockeyTrainList.do"
+    },
+    {
+      "path": "/jockey/HonorJockeyList.do",
+      "url": "https://race.kra.co.kr/jockey/HonorJockeyList.do"
+    },
+    {
+      "path": "/jockey/ProfileJockeyListActive.do",
+      "url": "https://race.kra.co.kr/jockey/ProfileJockeyListActive.do"
+    },
+    {
+      "path": "/jockey/RankScoreYearCompare.do",
+      "url": "https://race.kra.co.kr/jockey/RankScoreYearCompare.do"
+    },
+    {
+      "path": "/jockey/ScoreRankMostChuljuSearch.do",
+      "url": "https://race.kra.co.kr/jockey/ScoreRankMostChuljuSearch.do"
+    },
+    {
+      "path": "/jockey/TrainingList.do",
+      "url": "https://race.kra.co.kr/jockey/TrainingList.do"
+    },
+    {
+      "path": "/jockey/mvpJockey.do",
+      "url": "https://race.kra.co.kr/jockey/mvpJockey.do"
+    },
+    {
+      "path": "/movie/LiveBroadcast.do",
+      "url": "https://race.kra.co.kr/movie/LiveBroadcast.do"
+    },
+    {
+      "path": "/movie/MovieBoard.do",
+      "url": "https://race.kra.co.kr/movie/MovieBoard.do"
+    },
+    {
+      "path": "/owner/HorseOwnerRegister.do",
+      "url": "https://race.kra.co.kr/owner/HorseOwnerRegister.do"
+    },
+    {
+      "path": "/owner/HorseOwnerStatus.do",
+      "url": "https://race.kra.co.kr/owner/HorseOwnerStatus.do"
+    },
+    {
+      "path": "/owner/posessStateHorseownerList.do",
+      "url": "https://race.kra.co.kr/owner/posessStateHorseownerList.do"
+    },
+    {
+      "path": "/raceFastreport/BranchEntranceInwon.do",
+      "url": "https://race.kra.co.kr/raceFastreport/BranchEntranceInwon.do"
+    },
+    {
+      "path": "/raceFastreport/ChuljumaWeightWeight.do",
+      "url": "https://race.kra.co.kr/raceFastreport/ChuljumaWeightWeight.do"
+    },
+    {
+      "path": "/raceFastreport/ChulmapyoChange.do",
+      "url": "https://race.kra.co.kr/raceFastreport/ChulmapyoChange.do"
+    },
+    {
+      "path": "/raceFastreport/ScoreInfo.do",
+      "url": "https://race.kra.co.kr/raceFastreport/ScoreInfo.do"
+    },
+    {
+      "path": "/raceScore/ConditionMaxAvgRecordSearch.do",
+      "url": "https://race.kra.co.kr/raceScore/ConditionMaxAvgRecordSearch.do"
+    },
+    {
+      "path": "/raceScore/ConditionScoreSearch.do",
+      "url": "https://race.kra.co.kr/raceScore/ConditionScoreSearch.do"
+    },
+    {
+      "path": "/raceScore/ObjtRaceGallery.do",
+      "url": "https://race.kra.co.kr/raceScore/ObjtRaceGallery.do"
+    },
+    {
+      "path": "/raceScore/ObjtRaceRaceList.do",
+      "url": "https://race.kra.co.kr/raceScore/ObjtRaceRaceList.do"
+    },
+    {
+      "path": "/raceScore/RaceScorePdfList.do",
+      "url": "https://race.kra.co.kr/raceScore/RaceScorePdfList.do"
+    },
+    {
+      "path": "/raceScore/RaceScoreRecordList.do",
+      "url": "https://race.kra.co.kr/raceScore/RaceScoreRecordList.do"
+    },
+    {
+      "path": "/raceScore/RecordBaedang.do",
+      "url": "https://race.kra.co.kr/raceScore/RecordBaedang.do"
+    },
+    {
+      "path": "/raceScore/RecordDistanceDistanceTopRecord.do",
+      "url": "https://race.kra.co.kr/raceScore/RecordDistanceDistanceTopRecord.do"
+    },
+    {
+      "path": "/raceScore/RecordKinds.do",
+      "url": "https://race.kra.co.kr/raceScore/RecordKinds.do"
+    },
+    {
+      "path": "/raceScore/RecordMatchRacinghorseSearch.do",
+      "url": "https://race.kra.co.kr/raceScore/RecordMatchRacinghorseSearch.do"
+    },
+    {
+      "path": "/raceScore/RepresentHorseList.do",
+      "url": "https://race.kra.co.kr/raceScore/RepresentHorseList.do"
+    },
+    {
+      "path": "/raceScore/ScoretableScoreList.do",
+      "url": "https://race.kra.co.kr/raceScore/ScoretableScoreList.do"
+    },
+    {
+      "path": "/raceScore/SeriesRaceScoreList.do",
+      "url": "https://race.kra.co.kr/raceScore/SeriesRaceScoreList.do"
+    },
+    {
+      "path": "/raceguide/RaceArsService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceArsService.do"
+    },
+    {
+      "path": "/raceguide/RaceCommonSenseService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceCommonSenseService.do"
+    },
+    {
+      "path": "/raceguide/RaceDiseaseSearchService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceDiseaseSearchService.do"
+    },
+    {
+      "path": "/raceguide/RaceFaxService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceFaxService.do"
+    },
+    {
+      "path": "/raceguide/RaceGetGoodHorseService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceGetGoodHorseService.do"
+    },
+    {
+      "path": "/raceguide/RaceHorseConsernedPersonService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceHorseConsernedPersonService.do"
+    },
+    {
+      "path": "/raceguide/RaceInternetService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceInternetService.do"
+    },
+    {
+      "path": "/raceguide/RaceLibrarySpeciallistLectureService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceLibrarySpeciallistLectureService.do"
+    },
+    {
+      "path": "/raceguide/RaceManagementStandardService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceManagementStandardService.do"
+    },
+    {
+      "path": "/raceguide/RaceMediaCenterUseService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceMediaCenterUseService.do"
+    },
+    {
+      "path": "/raceguide/RaceMediaSpeciallistLectureService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceMediaSpeciallistLectureService.do"
+    },
+    {
+      "path": "/raceguide/RaceProcessGetService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceProcessGetService.do"
+    },
+    {
+      "path": "/raceguide/RaceRefereeCompositionService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceRefereeCompositionService.do"
+    },
+    {
+      "path": "/raceguide/RaceRefreeFAQService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceRefreeFAQService.do"
+    },
+    {
+      "path": "/raceguide/RaceRelatedLawService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceRelatedLawService.do"
+    },
+    {
+      "path": "/raceguide/RaceReviewRaceService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceReviewRaceService.do"
+    },
+    {
+      "path": "/raceguide/RaceRssServiceIntro.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceRssServiceIntro.do"
+    },
+    {
+      "path": "/raceguide/RaceSocietyRestorationService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceSocietyRestorationService.do"
+    },
+    {
+      "path": "/raceguide/RaceSpeciallistLectureService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceSpeciallistLectureService.do"
+    },
+    {
+      "path": "/raceguide/RaceTaxInfoService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceTaxInfoService.do"
+    },
+    {
+      "path": "/raceguide/RaceWordSearchService.do",
+      "url": "https://race.kra.co.kr/raceguide/RaceWordSearchService.do"
+    },
+    {
+      "path": "/racehorse/ProfileHorsenameKinds.do",
+      "url": "https://race.kra.co.kr/racehorse/ProfileHorsenameKinds.do"
+    },
+    {
+      "path": "/racehorse/accessoryState.do",
+      "url": "https://race.kra.co.kr/racehorse/accessoryState.do"
+    },
+    {
+      "path": "/racehorse/byeondongPeriodSearch.do",
+      "url": "https://race.kra.co.kr/racehorse/byeondongPeriodSearch.do"
+    },
+    {
+      "path": "/racehorse/jBirth.do",
+      "url": "https://race.kra.co.kr/racehorse/jBirth.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseChuljuInfo.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseChuljuInfo.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseIntro.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseIntro.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseKindCnt.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseKindCnt.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseObjtRaceList.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseObjtRaceList.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseProductorList.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseProductorList.do"
+    },
+    {
+      "path": "/racehorse/jejuHorseSireOrderList.do",
+      "url": "https://race.kra.co.kr/racehorse/jejuHorseSireOrderList.do"
+    },
+    {
+      "path": "/racehorse/posessHorseownerkindsNumber.do",
+      "url": "https://race.kra.co.kr/racehorse/posessHorseownerkindsNumber.do"
+    },
+    {
+      "path": "/racehorse/racehorseBoard.do",
+      "url": "https://race.kra.co.kr/racehorse/racehorseBoard.do"
+    },
+    {
+      "path": "/racehorse/scoreRecent50Object.do",
+      "url": "https://race.kra.co.kr/racehorse/scoreRecent50Object.do"
+    },
+    {
+      "path": "/raceoper/RaceoperBoard.do",
+      "url": "https://race.kra.co.kr/raceoper/RaceoperBoard.do"
+    },
+    {
+      "path": "/raceoper/RaceoperView.do",
+      "url": "https://race.kra.co.kr/raceoper/RaceoperView.do"
+    },
+    {
+      "path": "/referee/DecisionAddItemPunish.do",
+      "url": "https://race.kra.co.kr/referee/DecisionAddItemPunish.do"
+    },
+    {
+      "path": "/referee/DecisionItem.do",
+      "url": "https://race.kra.co.kr/referee/DecisionItem.do"
+    },
+    {
+      "path": "/referee/HonorRefereeObserveInfo.do",
+      "url": "https://race.kra.co.kr/referee/HonorRefereeObserveInfo.do"
+    },
+    {
+      "path": "/referee/RaceReview.do",
+      "url": "https://race.kra.co.kr/referee/RaceReview.do"
+    },
+    {
+      "path": "/referee/RacingTrainCheckList.do",
+      "url": "https://race.kra.co.kr/referee/RacingTrainCheckList.do"
+    },
+    {
+      "path": "/referee/RacingTrainPassDeferList.do",
+      "url": "https://race.kra.co.kr/referee/RacingTrainPassDeferList.do"
+    },
+    {
+      "path": "/referee/RefereeReport.do",
+      "url": "https://race.kra.co.kr/referee/RefereeReport.do"
+    },
+    {
+      "path": "/referee/StartingDataObserveInfo.do",
+      "url": "https://race.kra.co.kr/referee/StartingDataObserveInfo.do"
+    },
+    {
+      "path": "/referee/StartingRacingTrainCheckList.do",
+      "url": "https://race.kra.co.kr/referee/StartingRacingTrainCheckList.do"
+    },
+    {
+      "path": "/startingData/endRequestHorsesList.do",
+      "url": "https://race.kra.co.kr/startingData/endRequestHorsesList.do"
+    },
+    {
+      "path": "/startingData/raceImplementSystem.do",
+      "url": "https://race.kra.co.kr/startingData/raceImplementSystem.do"
+    },
+    {
+      "path": "/startingData/startingDataBoard.do",
+      "url": "https://race.kra.co.kr/startingData/startingDataBoard.do"
+    },
+    {
+      "path": "/startingData/startingTrainList.do",
+      "url": "https://race.kra.co.kr/startingData/startingTrainList.do"
+    },
+    {
+      "path": "/story/myExpectAllList.do",
+      "url": "https://race.kra.co.kr/story/myExpectAllList.do"
+    },
+    {
+      "path": "/thisweekrace/ChulmaDate.do",
+      "url": "https://race.kra.co.kr/thisweekrace/ChulmaDate.do"
+    },
+    {
+      "path": "/thisweekrace/EventRaceEvent.do",
+      "url": "https://race.kra.co.kr/thisweekrace/EventRaceEvent.do"
+    },
+    {
+      "path": "/thisweekrace/EventRacePlan.do",
+      "url": "https://race.kra.co.kr/thisweekrace/EventRacePlan.do"
+    },
+    {
+      "path": "/thisweekrace/EventRaceProgress.do",
+      "url": "https://race.kra.co.kr/thisweekrace/EventRaceProgress.do"
+    },
+    {
+      "path": "/thisweekrace/EventRaceRegist.do",
+      "url": "https://race.kra.co.kr/thisweekrace/EventRaceRegist.do"
+    },
+    {
+      "path": "/thisweekrace/MediaChulmapyo.do",
+      "url": "https://race.kra.co.kr/thisweekrace/MediaChulmapyo.do"
+    },
+    {
+      "path": "/thisweekrace/ThisWeekBaljuTime.do",
+      "url": "https://race.kra.co.kr/thisweekrace/ThisWeekBaljuTime.do"
+    },
+    {
+      "path": "/thisweekrace/ThisWeekDetailInfoList.do",
+      "url": "https://race.kra.co.kr/thisweekrace/ThisWeekDetailInfoList.do"
+    },
+    {
+      "path": "/thisweekrace/ThisWeekScoretableDailyScoretable.do",
+      "url": "https://race.kra.co.kr/thisweekrace/ThisWeekScoretableDailyScoretable.do"
+    },
+    {
+      "path": "/thisweekrace/ThisWeekWeight.do",
+      "url": "https://race.kra.co.kr/thisweekrace/ThisWeekWeight.do"
+    },
+    {
+      "path": "/trainer/dailyDayTrainList.do",
+      "url": "https://race.kra.co.kr/trainer/dailyDayTrainList.do"
+    },
+    {
+      "path": "/trainer/monthlyTrainTerm.do",
+      "url": "https://race.kra.co.kr/trainer/monthlyTrainTerm.do"
+    },
+    {
+      "path": "/trainer/mvpTrainer.do",
+      "url": "https://race.kra.co.kr/trainer/mvpTrainer.do"
+    },
+    {
+      "path": "/trainer/profileTrainerList.do",
+      "url": "https://race.kra.co.kr/trainer/profileTrainerList.do"
+    },
+    {
+      "path": "/trainer/swimTrainDayTrainList.do",
+      "url": "https://race.kra.co.kr/trainer/swimTrainDayTrainList.do"
+    },
+    {
+      "path": "/trainer/thisWeekTrainList.do",
+      "url": "https://race.kra.co.kr/trainer/thisWeekTrainList.do"
+    },
+    {
+      "path": "/trainer/trainerScoreYearRecord.do",
+      "url": "https://race.kra.co.kr/trainer/trainerScoreYearRecord.do"
+    },
+    {
+      "path": "절대경로",
+      "url": "https://race.kra.co.kr절대경로"
+    }
+  ],
+  "last_checked": "2026-03-02T09:38:58.495190"
+}

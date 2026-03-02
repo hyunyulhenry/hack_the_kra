@@ -51,3 +51,6 @@
 | Lo & Bacon-Shone | 1994 | Approximating the Ordering Probabilities of Multi-Entry Competitions | Harville 편향 보정 |
 | Sung & Johnson | 2010 | A Quantitative Analysis of Market Efficiency in Hong Kong Horse Race Betting | HK 시장 효율성 |
 | Ziemba & Hausch | 1987 | *Dr. Z's Beat the Racetrack* (서적) | 실전 베팅 전략 |
+| Colle (Alezan AI) | 2022 | What AI can do for horse-racing? (arXiv:2207.04981) | CV+SL+GT 융합 로드맵. 배당률이 단일 최강 피처임을 재확인. 기수-말 궁합 점수화 아이디어 |
+| Nguyen | 2024 | Optimizing Horse Racing Predictions through Ensemble Learning | LightGBM+XGBoost+CatBoost 스태킹, XGBoost 메타모델 → v3 아키텍처에 반영 |
+| Gupta & Singh | 2023 | Horse Race Results Prediction Using ML with Feature Selection (IJISAE) | SHAP 기반 명시적 피처 선택 단계 → 파이프라인에 반영 |
